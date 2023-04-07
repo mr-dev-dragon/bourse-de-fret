@@ -3,17 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { DateFormatPipe } from './pipes/date-format.pipe';
-import { AComponent } from './components/a/a.component';
+import { DarkModeComponent } from './components/dark-mode-toggle/dark-mode.component';
 
 
 @NgModule({
   declarations: [
     DateFormatPipe,
-    AComponent
+    DarkModeComponent
   ],
   imports: [
     CommonModule,
     SharedRoutingModule
+  ]
+  ,exports: [
+    DarkModeComponent
+    
   ]
 })
 export class SharedModule { }
