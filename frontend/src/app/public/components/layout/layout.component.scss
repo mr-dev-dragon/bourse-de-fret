@@ -1,0 +1,89 @@
+.this-div-is-the-container-of-all-the-ui {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  header {
+    grid-area: header;
+
+    nav {
+      &:first-child {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        height: 1.5rem;
+        background-color: rgb(226, 223, 63);
+      }
+
+      &:last-child {
+        margin-top: 1.5rem;
+        height: 3rem;
+        background-color: rgb(226, 123, 63);
+      }
+    }
+  }
+
+    main {
+        margin: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr );
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        height: 500px;
+       
+ 
+            // display: grid;
+            // grid-template-columns: repeat(, minmax(150px, 1fr));
+     
+          
+        
+   
+      aside.left {
+        grid-area: auto;
+    text-align: center;
+        background-color: rgba(63, 128, 226, 0.932);
+      }
+  
+      article {
+          grid-area: 1 / 2 / 3 / 6;
+          text-align: center;
+        background-color: rgba(109, 226, 63, 0.829);
+      }
+  
+      aside.right {
+          grid-area: auto;
+        text-align: center;
+        background-color: rgb(63, 193, 226);
+      }
+    }
+  footer {
+    grid-area: footer;
+    
+          nav.f-primary  {
+           
+              height: 16rem;
+              background-color: rgb(214, 101, 35);
+            }    
+          nav.f-secondary {
+              height: 6rem;
+              background-color: rgb(226, 123, 63);
+
+            }
+          nav.f-tertiary  {
+            
+              width: 100%;
+              bottom: 0;
+              z-index: 100;
+              height: 1.5rem;
+              background-color: rgb(226, 223, 63);
+          }  
+  }
+}
+
+
+

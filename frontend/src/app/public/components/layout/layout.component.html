@@ -1,0 +1,41 @@
+
+
+<div  class="this-div-is-the-container-of-all-the-ui">
+      <header>
+      <nav>
+        <app-secondary-header></app-secondary-header>
+      </nav>
+      <nav>
+        <app-primary-header></app-primary-header>
+      </nav>
+    </header>
+    <main class="main-container">
+      <ng-container *ngIf="Parameter.showLeftSide">
+        <aside class="left">
+          <app-left-aside></app-left-aside>
+        </aside>
+      </ng-container>
+      <article class="article-content">
+        <router-outlet></router-outlet>
+        main
+
+      </article>
+      <ng-container *ngIf="Parameter.showRightSide">
+        <aside class="right">
+          <app-left-aside></app-left-aside>
+        </aside>
+      </ng-container>
+    </main>
+    <footer>
+      <nav class="f-primary">
+        <app-primary-header></app-primary-header>
+      </nav>
+      <nav class="f-secondary">
+        <app-secondary-header></app-secondary-header>
+      </nav>
+      <nav class="f-tertiary">
+        <app-tertiary-footer></app-tertiary-footer>
+      </nav>
+    </footer>
+</div>
+
