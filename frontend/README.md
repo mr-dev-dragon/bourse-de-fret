@@ -1,5 +1,5 @@
 # Frontend
-
+https://miro.medium.com/v2/resize:fit:1100/format:webp/0*cYdP5q5MnPwMRz4s.png
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
 
 ## Development server
