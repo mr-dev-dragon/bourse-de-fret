@@ -1,14 +1,25 @@
-.this-div-is-the-container-of-all-the-ui {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+.this-div-is-the-container-of-all-the-app-ui {
+ height: 100vh;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 16px;
+ display: grid;
+ grid-template-areas: 
+'header header header'
+'main main main'
+'footer footer footer';
+grid-template-columns: 1fr 4fr 1fr;
+grid-template-rows: 4.5rem auto auto  ;
+
+ header,footer,main,nav.navigation,aside {
+  color: #fff;
+  padding: 1.25;
+  border: skyblue 1px solid;
+
+ }
 
   header {
     grid-area: header;
+      background-color: rgb(226, 166, 63);
 
     nav {
       &:first-child {
@@ -27,63 +38,68 @@
       }
     }
   }
-
-    main {
-        margin: 0.5rem;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr );
-        grid-template-rows: 1fr;
-        grid-column-gap: 20px;
-        height: 500px;
-       
- 
-            // display: grid;
-            // grid-template-columns: repeat(, minmax(150px, 1fr));
-     
-          
-        
-   
-      aside.left {
-        grid-area: auto;
-    text-align: center;
-        background-color: rgba(63, 128, 226, 0.932);
-      }
   
-      article {
-          grid-area: 1 / 2 / 3 / 6;
-          text-align: center;
-        background-color: rgba(109, 226, 63, 0.829);
-      }
-  
-      aside.right {
-          grid-area: auto;
-        text-align: center;
-        background-color: rgb(63, 193, 226);
-      }
+  main { 
+    min-height: 80vh;
+  grid-area:main ;
+      background-color: rgba(109, 226, 63, 0.829);
+    }
+    nav.navigation{
+        grid-area: nav ;
+      background-color: rgb(32, 121, 172);
+    }
+    aside{
+    grid-area: sidebar;
+      background-color: rgb(63, 193, 226);
     }
   footer {
-    grid-area: footer;
-    
-          nav.f-primary  {
-           
-              height: 16rem;
-              background-color: rgb(214, 101, 35);
-            }    
-          nav.f-secondary {
-              height: 6rem;
-              background-color: rgb(226, 123, 63);
-
-            }
-          nav.f-tertiary  {
-            
-              width: 100%;
-              bottom: 0;
-              z-index: 100;
-              height: 1.5rem;
-              background-color: rgb(226, 223, 63);
-          }  
+      grid-area: footer ;
+        background-color: rgb(147, 3, 183);
+    nav:nth-of-type(1){
+      height: 6rem;
+      background-color: rgb(214, 101, 35);
+    }
+    nav:nth-of-type(2) {
+      height: 6rem;
+      background-color: rgb(226, 123, 63);
+    }
+    nav:nth-of-type(3){
+      width: 100%;
+      margin: 0;
+      height: 1.5rem;
+      background-color: rgb(226, 223, 63);
+    }
   }
 }
 
 
 
+
+
+
+
+ 	// xsm 	<576px
+	// sm  	≥576px
+ 	// md  	≥768px
+ 	// lg  	≥992px
+	// xl  	≥1200px
+	// xxl 	≥1400px
+
+
+
+
+  //   xxxs - <160px
+  //   xxs - ≥160px
+  //   xs - ≥240px
+  //   xsm - ≥360px
+
+  //   sm - ≥576px
+  //   md - ≥768px
+  //   lg - ≥992px
+  //   xl - ≥1200px
+  //   xxl - ≥1400px
+
+
+  //   xxl - ≥1600px
+  //   xxxl - ≥2000px
+  //   xxxxl - ≥2400px
