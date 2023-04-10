@@ -12,8 +12,8 @@ grid-template-rows: 4.5rem auto auto  ;
 
  header,footer,main,nav.navigation,aside {
   color: #fff;
-  padding: 1.25;
-  border: skyblue 1px solid;
+  // padding: 1.25rem;
+
 
  }
 
@@ -23,23 +23,26 @@ grid-template-rows: 4.5rem auto auto  ;
 
     nav {
       &:first-child {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 100;
-        height: 1.5rem;
-        background-color: rgb(226, 223, 63);
+        // position: fixed;
+        // width: 100%;
+        // top: 0;
+        // z-index: 100;
+        // height: 1.5rem;
+        // background-color: rgb(226, 223, 63);
+        display: none;
       }
-
       &:last-child {
         margin-top: 1.5rem;
-        height: 3rem;
-        background-color: rgb(226, 123, 63);
+        height:2.5 rem;
+        background-color: rgb(77, 226, 63);
       }
+
+
     }
   }
   
   main { 
+ 
     min-height: 80vh;
   grid-area:main ;
       background-color: rgba(109, 226, 63, 0.829);
@@ -78,28 +81,3 @@ grid-template-rows: 4.5rem auto auto  ;
 
 
 
- 	// xsm 	<576px
-	// sm  	≥576px
- 	// md  	≥768px
- 	// lg  	≥992px
-	// xl  	≥1200px
-	// xxl 	≥1400px
-
-
-
-
-  //   xxxs - <160px
-  //   xxs - ≥160px
-  //   xs - ≥240px
-  //   xsm - ≥360px
-
-  //   sm - ≥576px
-  //   md - ≥768px
-  //   lg - ≥992px
-  //   xl - ≥1200px
-  //   xxl - ≥1400px
-
-
-  //   xxl - ≥1600px
-  //   xxxl - ≥2000px
-  //   xxxxl - ≥2400px
