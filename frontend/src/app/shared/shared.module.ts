@@ -12,6 +12,11 @@ import { PrimaryHeaderComponent } from './components/header/primary-header/prima
 import { SecondaryHeaderComponent } from './components/header/secondary-header/secondary-header.component';
 
 
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
+
+
+
 @NgModule({
   declarations: [
     DateFormatPipe,
@@ -24,8 +29,9 @@ import { SecondaryHeaderComponent } from './components/header/secondary-header/s
     PrimaryHeaderComponent,
     SecondaryHeaderComponent,
   ],
-  imports: [CommonModule, SharedRoutingModule],
+  imports: [CommonModule, SharedRoutingModule, LazyLoadImageModule],
   exports: [
+    LazyLoadImageModule,
     RightAsideComponent,
     LeftAsideComponent,
     RightAsideComponent,
