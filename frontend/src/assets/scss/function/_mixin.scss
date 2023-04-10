@@ -1,0 +1,11 @@
+
+
+
+@function rem($px) {
+  @if type-of($px) !=number {
+    @error "#{$px} is not a valid number.";
+  }
+  $rem-value: $px / 16;
+  $rem-value: #{ $rem-value }rem;
+@return $rem-value;
+}

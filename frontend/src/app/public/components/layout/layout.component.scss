@@ -1,3 +1,7 @@
+
+@use '../../../../assets/scss/function/mixin' as f;
+@use '../../../../assets/scss/function/breakpoints' as b;
+
 .this-div-is-the-container-of-all-the-app-ui {
  height: 100vh;
  font-family: 'Open Sans', sans-serif;
@@ -8,18 +12,17 @@
 'main main main'
 'footer footer footer';
 grid-template-columns: 1fr 4fr 1fr;
-grid-template-rows: 4.5rem auto auto  ;
-
- header,footer,main,nav.navigation,aside {
+// grid-template-rows: 4.5rem auto auto  ;
+grid-template-rows: 3rem auto auto  ;
+ header,footer,main,nav{
   color: #fff;
-  padding: 1.25;
-
-
+  margin: 0;
+  padding: 0;
  }
 
   header {
     grid-area: header;
-      background-color: rgb(226, 166, 63);
+    
 
     nav {
       &:first-child {
@@ -30,19 +33,57 @@ grid-template-rows: 4.5rem auto auto  ;
         height: 1.5rem;
         background-color: rgb(226, 223, 63);
       }
+   
+                        
 
       &:last-child {
         margin-top: 1.5rem;
         height: 3rem;
         background-color: rgb(226, 123, 63);
       }
+
+    @include b.media('<=phone') {
+      &:first-child {
+        background-color: rgb(226, 63, 63);
+      }
+  
+      &:last-child {
+        background-color: rgb(226, 63, 63);
+      }
+    }
+  @include b.media('<=tablet' ) {
+      &:first-child {
+          background-color: rgb(193, 63, 226);
+        }
+        &:last-child {
+          background-color: rgb(207, 63, 226);
+        }
+  }
+  @include b.media('<=desktop' ) {
+      &:first-child {
+          background-color: rgb(63, 226, 63);
+        }
+        &:last-child {
+          background-color: rgb(63, 226, 158);
+        }
+  }
+  @include b.media('>=LGdesktop' ) {
+      &:first-child {
+          background-color: rgb(226, 82, 63);
+        }
+        &:last-child {
+          background-color: rgb(223, 226, 63);
+        }
+  }
+
+
     }
   }
   
   main { 
-    // margin-top: 3400px;
-    min-height: 80vh;
-  grid-area:main ;
+    
+      min-height: 90vh;
+      grid-area:main ;
       background-color: rgba(109, 226, 63, 0.829);
     }
     nav.navigation{
@@ -55,7 +96,7 @@ grid-template-rows: 4.5rem auto auto  ;
     }
   footer {
       grid-area: footer ;
-        background-color: rgb(147, 3, 183);
+
     nav:nth-of-type(1){
       height: 6rem;
       background-color: rgb(214, 101, 35);
