@@ -38,7 +38,7 @@ $action-height-icons: f.rem(48);
     gap: 5px;
     display: grid;
     grid-template-areas: 'search  menu';
-    @include m.media(">=phone") { gap: 40px;}
+    @include m.media(">=phone") { gap: 40;}
       &--search{
         grid-area: search;
    
@@ -47,7 +47,17 @@ $action-height-icons: f.rem(48);
           width:  $action-height-icons;
           height: $action-width-icons;
         }
-
+             input {
+               display: none;
+             }
+      
+             @include m.media(">=601px") {
+               display: flex;
+               input {
+                 display: block;
+                 width: 30%;
+               }
+             }
           
       }
       &--call{
@@ -58,14 +68,15 @@ $action-height-icons: f.rem(48);
           width: $action-height-icons;
           height:$action-width-icons;
         }
+ 
       }
       &--menu{
         grid-area: menu;
         
-        img{
-          width:  $action-height-icons;
-          height: $action-width-icons;
-        }
+        img {
+            width: $action-height-icons;
+            height: $action-width-icons;
+          }
       } 
   }
 
