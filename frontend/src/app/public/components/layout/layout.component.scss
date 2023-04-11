@@ -1,10 +1,12 @@
+
+
 @use "../../../../assets/scss/function/mixin" as f;
 @use "../../../../assets/scss/function/breakpoints" as b;
 
 
 
 $header-p: f.rem(48);
-$header-s: f.rem(24);
+$header-s: f.rem(20);
 $grow:f.rem(5);
 
 .this-div-is-the-container-of-all-the-app-ui {
@@ -18,11 +20,12 @@ $grow:f.rem(5);
     "footer footer footer";
   grid-template-columns: 1fr 4fr 1fr;
 
-  grid-template-rows: $header-p auto auto;
+  grid-template-rows: f.rem(22)  auto auto;
 
   @include b.media(">=phone") {
       grid-template-rows: calc( $header-p + $header-s + $grow ) auto auto;
     }
+
 
   header,
   footer,
@@ -39,7 +42,7 @@ $grow:f.rem(5);
     nav {
       &:first-child {
         display: none;
-        background-color: rgb(32, 121, 172);
+        
       }
       
       &:last-child {
@@ -54,7 +57,7 @@ $grow:f.rem(5);
           position: fixed;
           width: 100%;
           top: 0;
-          z-index: 100;
+          z-index: 1;
           height: $header-s;
         }
         &:last-child {
@@ -68,7 +71,7 @@ $grow:f.rem(5);
   main {
     min-height: 90vh;
     grid-area: main;
-    background-color: rgba(109, 226, 63, 0.829);
+
   }
   nav.navigation {
     grid-area: nav;
@@ -80,28 +83,11 @@ $grow:f.rem(5);
   }
   footer {
     grid-area: footer;
+    width: 100%;
+    margin: 0;
 
-    nav:nth-of-type(1) {
-      height: 6rem;
-      background-color: rgb(214, 101, 35);
-    }
-    nav:nth-of-type(2) {
-      display: none;
-      background-color: rgb(226, 123, 63);
-    }
-    nav:nth-of-type(3) {
-      width: 100%;
-      margin: 0;
-      height: 1.5rem;
-      background-color: rgb(226, 223, 63);
-    }
-
+  
             @include b.media(">=phone") {
-              nav:nth-of-type(2) {
-                display: block;
-                  height: 6rem;
-                  background-color: rgb(226, 123, 63);
-                }
 
             }
   }
