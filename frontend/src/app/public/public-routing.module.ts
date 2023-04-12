@@ -6,10 +6,21 @@ const routes: Routes = [
   {
     path: '',
     component: TestComponent,
+    data: {
+      title: 'Public',
+      type: 'module',
+      menu: true,
+    },
   },
   {
     path: '**',
     component: TestComponent,
+
+    data: {
+      title: 'Public',
+      type: 'module',
+      menu: true,
+    },
   },
 ];
 
