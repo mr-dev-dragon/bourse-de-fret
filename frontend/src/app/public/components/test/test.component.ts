@@ -18,27 +18,17 @@ export class TestComponent {
       this.renderer.removeClass(this.cont.nativeElement, 's--inactive');
     }, 200);
   }
+  el = false;
   elf($event: any) {
-
-    if (this.cont.nativeElement.classList.contains('s--active')) return;
-    this.renderer.removeClass(this.cont.nativeElement, 's--inactive');
-      this.renderer.addClass(this.cont.nativeElement, 's--el-active');
-      this.renderer.addClass(this.cont.nativeElement, 's--active');
- 
-   
+     this.el = !this.el;
   }
+  elCloseBtn= false;
   elCloseBtnf(event: any) {
-
-      this.renderer.removeClass(this.cont.nativeElement, 's--inactive');
-        this.renderer.removeClass(this.cont.nativeElement, 's--active');
-  
-     
-      }
+    this.elCloseBtn = !this.elCloseBtn;
   }
+}
 
 
 
 
-
-
-
+ 
