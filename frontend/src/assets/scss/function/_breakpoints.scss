@@ -21,7 +21,8 @@ $media-expressions: (
 $unit-intervals: (
   "px": 1,
   "em": 0.01,
-  "rem": 0.1) !default;
+  "rem": 0.1
+  ) !default;
 
 @mixin media($conditions...) {
   @for $i from 1 through length($conditions) {

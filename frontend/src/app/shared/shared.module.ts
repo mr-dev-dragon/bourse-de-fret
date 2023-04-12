@@ -5,14 +5,12 @@ import { DateFormatPipe } from './pipes/date-format.pipe';
 import { DarkModeComponent } from './components/dark-mode-toggle/dark-mode.component';
 import { RightAsideComponent } from './components/right-aside/right-aside.component';
 import { LeftAsideComponent } from './components/left-aside/left-aside.component';
-import { PrimieryFooterComponent } from './components/footer/primiery-footer/primiery-footer.component';
-import { SecondaryFooterComponent } from './components/footer/secondary-footer/secondary-footer.component';
-import { TertiaryFooterComponent } from './components/footer/tertiary-footer/tertiary-footer.component';
 import { PrimaryHeaderComponent } from './components/header/primary-header/primary-header.component';
 import { SecondaryHeaderComponent } from './components/header/secondary-header/secondary-header.component';
 
 
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -23,11 +21,9 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     DarkModeComponent,
     RightAsideComponent,
     LeftAsideComponent,
-    PrimieryFooterComponent,
-    SecondaryFooterComponent,
-    TertiaryFooterComponent,
     PrimaryHeaderComponent,
     SecondaryHeaderComponent,
+    FooterComponent,
   ],
   imports: [CommonModule, SharedRoutingModule, LazyLoadImageModule],
   exports: [
@@ -36,11 +32,9 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     LeftAsideComponent,
     RightAsideComponent,
     LeftAsideComponent,
-    PrimieryFooterComponent,
-    SecondaryFooterComponent,
-    TertiaryFooterComponent,
     PrimaryHeaderComponent,
     SecondaryHeaderComponent,
+    FooterComponent,
   ],
 })
 export class SharedModule {}
